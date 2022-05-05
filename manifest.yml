@@ -1,0 +1,12 @@
+---
+timeout: 180
+instances: 1
+memory: 1G
+applications:
+- name: fx-util-redis-staticdata
+  memory: 1G
+  random-route: true
+  path: ./target/fx-util-redis-staticdata-0.0.1-SNAPSHOT.jar
+  SPRING_PROFILES_ACTIVE: cloud
+  services:
+    - redis
